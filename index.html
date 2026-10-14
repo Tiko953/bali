@@ -133,9 +133,10 @@ p{font-size:17px;line-height:1.45;margin:10px 0}
   <section class="slide on">
     <div class="card">
       <span class="stamp">TOP SECRET</span>
-      <div class="kicker">Dossier confidentiel n°001 · Ne pas transférer</div>
+      <div class="kicker">Dossier confidentiel n°001 · À l'attention d'Inès</div>
       <h1>Objet : demande <span class="hl">officielle</span> de Snapchat.</h1>
-      <figure class="pola" style="--r:3deg" data-photo="photos/moi-miroir.jpg" data-cap="le demandeur, très sérieux"></figure>
+      <p>Au début, je t'ai DM pour un <b>stage à Bali</b>. Petit changement de plan : je postule aussi pour <span class="hl">un autre poste</span>.</p>
+      <figure class="pola" style="--r:3deg" data-photo="photos/moi-miroir.jpg" data-cap="le candidat, très sérieux"></figure>
       <div class="row"><button class="btn next">Ouvrir le dossier →</button></div>
     </div>
   </section>
@@ -153,6 +154,7 @@ p{font-size:17px;line-height:1.45;margin:10px 0}
         <dt>Prochaine destination</dt><dd>Bali 🌴 <span class="small">(tiens tiens…)</span></dd>
         <dt>Club</dt><dd>PSG, ultra <span class="small">(désolé d'avance si t'es pour l'OM)</span></dd>
         <dt>Passion</dt><dd>Les échecs ♟️ <span class="small">(ce site, je l'avais prévu 3 coups à l'avance)</span></dd>
+        <dt>Musique</dt><dd>Je joue de la guitare 🎸 <span class="small">(oui, comme dans les films)</span></dd>
         <dt>Défauts</dt><dd>Aucun. J'ai vérifié deux fois.</dd>
         <dt>Talent caché</dt><dd>Faire des sites au lieu de juste demander</dd>
       </dl>
@@ -273,7 +275,7 @@ p{font-size:17px;line-height:1.45;margin:10px 0}
   <!-- 8 · Fin OUI -->
   <section class="slide" id="endYes">
     <div class="card" style="text-align:center">
-      <div class="kicker">♟️ Échec et mat · Dossier clôturé</div>
+      <div class="kicker">♟️ Échec et mat · Candidature acceptée</div>
       <h1>Je savais 😌</h1>
       <figure class="pola" style="--r:2deg" data-optional data-photo="photos/victoire.jpg" data-cap="moi en apprenant la nouvelle"></figure>
       <p>Dernière étape, la plus simple :</p>
@@ -405,7 +407,7 @@ document.getElementById('verify').onclick = () => {
 };
 document.getElementById('todoNext').addEventListener('click', () => {
   const picks = [...document.querySelectorAll('.todo input:checked')].map(i => i.parentNode.textContent.trim());
-  track('🌴 Programme Bali : ' + (picks.length ? picks.length + '/6 cochés → ' + picks.join(' · ') : 'rien coché'));
+  track('🌴 Programme Bali : ' + (picks.length ? picks.length + '/' + document.querySelectorAll('.todo input').length + ' cochés → ' + picks.join(' · ') : 'rien coché'));
 });
 
 /* Pile de photos NY */
